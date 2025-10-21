@@ -15,36 +15,56 @@
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             
-            /* --- FONDO INFANTIL: PATRÓN DE GLOBOS Y CONFETI --- */
-            /* Puedes cambiar el color base si quieres otro fondo sólido detrás de los elementos */
-            background-color: #fce4ec; /* Rosa pálido como base, similar al degradado original */
+            /* --- NUEVO FONDO INFANTIL: OSITOS, GLOBOS Y ESTRELLAS ESPACIADOS --- */
+            background-color: #fce4ec; /* Rosa pálido como color base */
             
-            /* Aquí creamos múltiples capas de fondo con CSS: globos, estrellas, confeti */
+            /* Múltiples capas de fondo para un patrón espaciado */
             background-image: 
-                /* Globos Azules Grandes */
-                radial-gradient(circle at 15% 10%, rgba(173, 216, 230, 0.7) 10px, transparent 10px),
-                radial-gradient(circle at 85% 90%, rgba(173, 216, 230, 0.7) 8px, transparent 8px),
-                /* Globos Rosas Medianos */
-                radial-gradient(circle at 70% 25%, rgba(255, 192, 203, 0.7) 7px, transparent 7px),
-                radial-gradient(circle at 30% 80%, rgba(255, 192, 203, 0.7) 9px, transparent 9px),
-                /* Estrellas Amarillas */
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 100, 0.6) 5px, transparent 5px), /* Centro */
-                radial-gradient(circle at 20% 60%, rgba(255, 255, 100, 0.6) 4px, transparent 4px), /* Esquina */
-                radial-gradient(circle at 80% 30%, rgba(255, 255, 100, 0.6) 6px, transparent 6px), /* Otra Esquina */
-                /* Confeti de colores */
-                radial-gradient(circle at 40% 10%, rgba(255, 105, 180, 0.5) 2px, transparent 2px), /* Fucsia */
-                radial-gradient(circle at 60% 90%, rgba(144, 238, 144, 0.5) 2px, transparent 2px), /* Verde claro */
-                radial-gradient(circle at 10% 70%, rgba(255, 165, 0, 0.5) 2px, transparent 2px), /* Naranja */
-                radial-gradient(circle at 90% 15%, rgba(135, 206, 250, 0.5) 2px, transparent 2px); /* Azul Cielo */
+                /* Tus Ositos - Asegúrate que el nombre del archivo PNG sea correcto */
+                url('pequeCreacioneskael.png'), /* Primera aparición del osito */
+                url('pequeCreacioneskael.png'), /* Segunda aparición */
+                url('pequeCreacioneskael.png'), /* Tercera aparición */
+                url('pequeCreacioneskael.png'), /* Cuarta aparición */
+                
+                /* Globos Azules y Rosas Más Grandes y Espaciados (Círculos CSS) */
+                radial-gradient(circle at 10% 80%, rgba(173, 216, 230, 0.6) 20px, transparent 20px), /* Globo Azul 1 */
+                radial-gradient(circle at 90% 20%, rgba(255, 192, 203, 0.6) 18px, transparent 18px), /* Globo Rosa 1 */
+                radial-gradient(circle at 40% 10%, rgba(173, 216, 230, 0.5) 15px, transparent 15px), /* Globo Azul 2 */
+                radial-gradient(circle at 60% 90%, rgba(255, 192, 203, 0.5) 17px, transparent 17px), /* Globo Rosa 2 */
+                
+                /* Estrellas Amarillas y Fucsias Espaciadas (Círculos CSS) */
+                radial-gradient(circle at 25% 45%, rgba(255, 255, 100, 0.7) 10px, transparent 10px), /* Estrella Amarilla 1 */
+                radial-gradient(circle at 75% 65%, rgba(255, 105, 180, 0.7) 8px, transparent 8px); /* Estrella Fucsia 1 */
 
             background-size: 
-                80px 80px, 90px 90px, /* Tamaño de los globos */
-                70px 70px, 100px 100px, /* Más tamaños para globos */
-                60px 60px, 50px 50px, 70px 70px, /* Estrellas */
-                30px 30px, 40px 40px, 35px 35px, 25px 25px; /* Confeti */
+                100px 100px, /* Tamaño del osito 1 */
+                80px 80px,   /* Tamaño del osito 2 */
+                120px 120px, /* Tamaño del osito 3 */
+                90px 90px,   /* Tamaño del osito 4 */
                 
-            background-repeat: repeat; /* ¡Importante para que se vea el patrón! */
+                150px 150px, /* Tamaño del patrón de globos 1 */
+                180px 180px, /* Tamaño del patrón de globos 2 */
+                120px 120px, /* Tamaño del patrón de globos 3 */
+                160px 160px, /* Tamaño del patrón de globos 4 */
+                
+                100px 100px, /* Tamaño del patrón de estrellas 1 */
+                110px 110px; /* Tamaño del patrón de estrellas 2 */
+                
+            background-repeat: repeat; /* ¡Todos los elementos se repiten! */
             background-attachment: fixed; /* El fondo no se mueve al hacer scroll */
+            background-position: 
+                20px 20px,   /* Posición del osito 1 */
+                150px 100px, /* Posición del osito 2 */
+                280px 200px, /* Posición del osito 3 */
+                50px 250px,  /* Posición del osito 4 */
+
+                0px 0px, /* Posición de globos */
+                0px 0px, /* Posición de globos */
+                0px 0px, /* Posición de globos */
+                0px 0px, /* Posición de globos */
+
+                0px 0px, /* Posición de estrellas */
+                0px 0px; /* Posición de estrellas */
             
             display: flex;
             justify-content: center;
@@ -72,7 +92,7 @@
         .header-marca {
             font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            color: #e91e63; /* Rosa fuerte */
+            color: #000000; /* Rosa fuerte */
             font-size: 1.8em; /* Tamaño visible */
             margin-bottom: 15px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Sombra suave para que resalte */
@@ -81,7 +101,7 @@
         /* Título Principal */
         h1 {
             font-family: 'Great Vibes', cursive;
-            color: #000000; /* negro */
+            color: #e91e63; /* Rosa fuerte */
             font-size: 3.2em;
             margin-top: 10px;
             margin-bottom: 20px;
@@ -153,7 +173,7 @@
         
         <div class="opciones-botones">
             <a 
-                href="https://wa.me/50496005178" 
+                href="https://wa.me/50496005178"  
                 class="boton-wa boton-confirma" 
                 target="_blank"
             >
@@ -161,7 +181,7 @@
             </a>
 
             <a 
-                href="https://wa.me/50496005178 
+                href="https://wa.me/50496005178"  
                 class="boton-wa boton-declina" 
                 target="_blank"
             >
