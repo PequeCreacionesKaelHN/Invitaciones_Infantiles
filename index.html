@@ -11,60 +11,57 @@
     
     <style>
         /* Estilos Generales */
-       body {
+        body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             
             /* --- FONDO INFANTIL: OSITOS, GLOBOS Y ESTRELLAS ESPACIADOS --- */
             background-color: #fce4ec; /* Rosa pálido como color base */
             
-            /* Múltiples capas de fondo para un patrón más espaciado y variado */
+            /* Múltiples capas de fondo para un patrón espaciado y variado */
             background-image: 
-                /* Tus Ositos - Usaremos la misma imagen, pero con tamaños y posiciones que se repiten más grandes */
-                url('pequenaCreacioneskael.png'), 
-                url('pequenaCreacioneskael.png'), 
-                url('pequenaCreacioneskael.png'), 
-                url('pequenaCreacioneskael.png'), 
+                /* Tus Ositos - [IMPORTANTE: La imagen debe estar subida a GitHub como 'pequenaCreacioneskael.png'] */
+                url('pequeCreacioneskael.png'), 
+                url('pequeCreacioneskael.png'), 
+                url('pequeCreacioneskael.png'), 
+                url('pequeCreacioneskael.png'), 
                 
                 /* Globos Azules y Rosas Grandes y Espaciados (Círculos CSS) */
-                radial-gradient(circle at 10% 80%, rgba(173, 216, 230, 0.6) 25px, transparent 25px), /* Globo Azul 1 */
-                radial-gradient(circle at 90% 20%, rgba(255, 192, 203, 0.6) 22px, transparent 22px), /* Globo Rosa 1 */
-                radial-gradient(circle at 40% 10%, rgba(173, 216, 230, 0.5) 20px, transparent 20px), /* Globo Azul 2 */
-                radial-gradient(circle at 60% 90%, rgba(255, 192, 203, 0.5) 23px, transparent 23px), /* Globo Rosa 2 */
+                radial-gradient(circle at 10% 80%, rgba(173, 216, 230, 0.6) 25px, transparent 25px), 
+                radial-gradient(circle at 90% 20%, rgba(255, 192, 203, 0.6) 22px, transparent 22px), 
+                radial-gradient(circle at 40% 10%, rgba(173, 216, 230, 0.5) 20px, transparent 20px), 
+                radial-gradient(circle at 60% 90%, rgba(255, 192, 203, 0.5) 23px, transparent 23px), 
                 
                 /* Estrellas Amarillas y Fucsias Espaciadas (Círculos CSS) */
-                radial-gradient(circle at 25% 45%, rgba(255, 255, 100, 0.7) 12px, transparent 12px), /* Estrella Amarilla 1 */
-                radial-gradient(circle at 75% 65%, rgba(255, 105, 180, 0.7) 10px, transparent 10px); /* Estrella Fucsia 1 */
+                radial-gradient(circle at 25% 45%, rgba(255, 255, 100, 0.7) 12px, transparent 12px), 
+                radial-gradient(circle at 75% 65%, rgba(255, 105, 180, 0.7) 10px, transparent 10px); 
 
             background-size: 
-                /* Tamaños de los ositos - ¡Ahora más grandes y más espaciados! */
-                250px 250px,   /* Osito 1 */
-                300px 300px,   /* Osito 2 */
-                200px 200px,   /* Osito 3 */
-                280px 280px,   /* Osito 4 */
+                /* Tamaños de los ositos - Más grandes y visibles */
+                150px 150px,   /* Osito 1 */
+                180px 180px,   /* Osito 2 */
+                130px 130px,   /* Osito 3 */
+                160px 160px,   /* Osito 4 */
                 
-                /* Tamaños de los globos - También más grandes */
+                /* Tamaños de los globos y estrellas */
                 250px 250px, 280px 280px, 
                 220px 220px, 270px 270px, 
-                
-                /* Tamaños de las estrellas */
                 180px 180px, 200px 200px;
                 
-            background-repeat: repeat; /* ¡Todos los elementos se repiten! */
+            background-repeat: repeat; 
             background-attachment: fixed; 
             
-            /* Posiciones de los elementos - Ajustadas para que se vean más dispersos */
-            /* Cada par (X Y) corresponde a cada background-image de arriba */
+            /* Posiciones de los elementos - Ajustadas para un patrón espaciado (la suma de size + position ayuda al espaciado) */
             background-position: 
-                50px 50px,    /* Osito 1 */
-                300px 200px,  /* Osito 2 */
-                550px 100px,  /* Osito 3 */
-                100px 400px,  /* Osito 4 */
+                50px 50px,    /* Posición del osito 1 */
+                280px 180px,  /* Posición del osito 2 */
+                500px 80px,   /* Posición del osito 3 */
+                150px 350px,  /* Posición del osito 4 */
 
-                150px 0px,    /* Globo Azul 1 */
-                0px 250px,    /* Globo Rosa 1 */
-                400px 350px,  /* Globo Azul 2 */
-                200px 500px,  /* Globo Rosa 2 */
+                10px 0px,     /* Globo Azul 1 */
+                0px 300px,    /* Globo Rosa 1 */
+                400px 400px,  /* Globo Azul 2 */
+                200px 550px,  /* Globo Rosa 2 */
 
                 350px 150px,  /* Estrella Amarilla 1 */
                 500px 450px;  /* Estrella Fucsia 1 */
@@ -77,12 +74,13 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
         /* FONDO DE LA TARJETA (Rosa Polvo) */
         .contenedor-tarjeta {
-            background-color: #f8e1e7; /* Fondo Rosa Polvo (más visible que el blanco) */
+            background-color: #f8e1e7; 
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra suave */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
             text-align: center;
             max-width: 550px;
             width: 100%;
@@ -94,16 +92,16 @@
         .header-marca {
             font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            color: #000000; /* Rosa fuerte */
-            font-size: 1.8em; /* Tamaño visible */
+            color: #000000; 
+            font-size: 1.8em; 
             margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Sombra suave para que resalte */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05); 
         }
 
         /* Título Principal */
         h1 {
             font-family: 'Great Vibes', cursive;
-            color: #e91e63; /* Rosa fuerte */
+            color: #e91e63; 
             font-size: 3.2em;
             margin-top: 10px;
             margin-bottom: 20px;
@@ -157,6 +155,12 @@
             box-shadow: 0 8px 20px rgba(255, 138, 128, 0.5);
         }
 
+        /* Animación de entrada de la tarjeta */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* Responsive para pantallas pequeñas */
         @media (max-width: 600px) {
             h1 { font-size: 2.5em; }
@@ -168,14 +172,14 @@
 <body>
     <div class="contenedor-tarjeta">
         
-        <div class="header-marca">Peque Creaciones Kael</div> 
+        <div class="header-marca">PequeCreaciones_KaelHN</div> 
 
         <h1>¡Nos encantaría contar contigo!</h1>
         <p>Tu presencia es muy importante para nosotros. Por favor, elige una opción a continuación para confirmar tu asistencia.</p>
         
         <div class="opciones-botones">
             <a 
-                href="https://wa.me/50496005178"  
+                href="https://wa.me/50496005178" 
                 class="boton-wa boton-confirma" 
                 target="_blank"
             >
