@@ -15,56 +15,12 @@
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             
-            /* --- FONDO INFANTIL: OSITOS, GLOBOS Y ESTRELLAS ESPACIADOS --- */
-            background-color: #fce4ec; /* Rosa pálido como color base */
-            
-            /* Múltiples capas de fondo para un patrón espaciado y variado */
-            background-image: 
-                /* Tus Ositos - [IMPORTANTE: La imagen debe estar subida a GitHub como 'pequenaCreacioneskael.png'] */
-                url('pequeCreacioneskael.png'), 
-                url('pequeCreacioneskael.png'), 
-                url('pequeCreacioneskael.png'), 
-                url('pequeCreacioneskael.png'), 
-                
-                /* Globos Azules y Rosas Grandes y Espaciados (Círculos CSS) */
-                radial-gradient(circle at 10% 80%, rgba(173, 216, 230, 0.6) 25px, transparent 25px), 
-                radial-gradient(circle at 90% 20%, rgba(255, 192, 203, 0.6) 22px, transparent 22px), 
-                radial-gradient(circle at 40% 10%, rgba(173, 216, 230, 0.5) 20px, transparent 20px), 
-                radial-gradient(circle at 60% 90%, rgba(255, 192, 203, 0.5) 23px, transparent 23px), 
-                
-                /* Estrellas Amarillas y Fucsias Espaciadas (Círculos CSS) */
-                radial-gradient(circle at 25% 45%, rgba(255, 255, 100, 0.7) 12px, transparent 12px), 
-                radial-gradient(circle at 75% 65%, rgba(255, 105, 180, 0.7) 10px, transparent 10px); 
-
-            background-size: 
-                /* Tamaños de los ositos - Más grandes y visibles */
-                150px 150px,   /* Osito 1 */
-                180px 180px,   /* Osito 2 */
-                130px 130px,   /* Osito 3 */
-                160px 160px,   /* Osito 4 */
-                
-                /* Tamaños de los globos y estrellas */
-                250px 250px, 280px 280px, 
-                220px 220px, 270px 270px, 
-                180px 180px, 200px 200px;
-                
-            background-repeat: repeat; 
-            background-attachment: fixed; 
-            
-            /* Posiciones de los elementos - Ajustadas para un patrón espaciado (la suma de size + position ayuda al espaciado) */
-            background-position: 
-                50px 50px,    /* Posición del osito 1 */
-                280px 180px,  /* Posición del osito 2 */
-                500px 80px,   /* Posición del osito 3 */
-                150px 350px,  /* Posición del osito 4 */
-
-                10px 0px,     /* Globo Azul 1 */
-                0px 300px,    /* Globo Rosa 1 */
-                400px 400px,  /* Globo Azul 2 */
-                200px 550px,  /* Globo Rosa 2 */
-
-                350px 150px,  /* Estrella Amarilla 1 */
-                500px 450px;  /* Estrella Fucsia 1 */
+            /* --- NUEVO FONDO INFANTIL CON IMAGEN GENERADA --- */
+            background-image: url('fondo-infantil-bipartido.png'); /* ¡Usa la imagen que generé! */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat; /* Para que la imagen no se repita */
+            background-position: center center; /* Centra la imagen de fondo */
+            background-attachment: fixed; /* El fondo no se mueve al hacer scroll */
             
             display: flex;
             justify-content: center;
@@ -75,9 +31,9 @@
             box-sizing: border-box;
         }
 
-        /* FONDO DE LA TARJETA (Rosa Polvo) */
+        /* FONDO DE LA TARJETA (Blanco Transparente para que se vea el fondo) */
         .contenedor-tarjeta {
-            background-color: #f8e1e7; 
+            background-color: rgba(255, 255, 255, 0.85); /* Blanco con 85% de opacidad */
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
@@ -92,7 +48,7 @@
         .header-marca {
             font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            color: #000000; 
+            color: #000000; /* Rosa fuerte */
             font-size: 1.8em; 
             margin-bottom: 15px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05); 
@@ -172,7 +128,7 @@
 <body>
     <div class="contenedor-tarjeta">
         
-        <div class="header-marca">PequeCreaciones_KaelHN</div> 
+        <div class="header-marca">Peque Creaciones Kael</div> 
 
         <h1>¡Nos encantaría contar contigo!</h1>
         <p>Tu presencia es muy importante para nosotros. Por favor, elige una opción a continuación para confirmar tu asistencia.</p>
@@ -187,7 +143,7 @@
             </a>
 
             <a 
-                href="https://wa.me/50496005178"  
+                href="https://wa.me/50496005178" 
                 class="boton-wa boton-declina" 
                 target="_blank"
             >
