@@ -11,70 +11,72 @@
     
     <style>
         /* Estilos Generales */
-        body {
+       body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             
-            /* --- NUEVO FONDO INFANTIL: OSITOS, GLOBOS Y ESTRELLAS ESPACIADOS --- */
+            /* --- FONDO INFANTIL: OSITOS, GLOBOS Y ESTRELLAS ESPACIADOS --- */
             background-color: #fce4ec; /* Rosa pálido como color base */
             
-            /* Múltiples capas de fondo para un patrón espaciado */
+            /* Múltiples capas de fondo para un patrón más espaciado y variado */
             background-image: 
-                /* Tus Ositos - Asegúrate que el nombre del archivo PNG sea correcto */
-                url('pequeCreacioneskael.png'), /* Primera aparición del osito */
-                url('pequeCreacioneskael.png'), /* Segunda aparición */
-                url('pequeCreacioneskael.png'), /* Tercera aparición */
-                url('pequeCreacioneskael.png'), /* Cuarta aparición */
+                /* Tus Ositos - Usaremos la misma imagen, pero con tamaños y posiciones que se repiten más grandes */
+                url('pequenaCreacioneskael.png'), 
+                url('pequenaCreacioneskael.png'), 
+                url('pequenaCreacioneskael.png'), 
+                url('pequenaCreacioneskael.png'), 
                 
-                /* Globos Azules y Rosas Más Grandes y Espaciados (Círculos CSS) */
-                radial-gradient(circle at 10% 80%, rgba(173, 216, 230, 0.6) 20px, transparent 20px), /* Globo Azul 1 */
-                radial-gradient(circle at 90% 20%, rgba(255, 192, 203, 0.6) 18px, transparent 18px), /* Globo Rosa 1 */
-                radial-gradient(circle at 40% 10%, rgba(173, 216, 230, 0.5) 15px, transparent 15px), /* Globo Azul 2 */
-                radial-gradient(circle at 60% 90%, rgba(255, 192, 203, 0.5) 17px, transparent 17px), /* Globo Rosa 2 */
+                /* Globos Azules y Rosas Grandes y Espaciados (Círculos CSS) */
+                radial-gradient(circle at 10% 80%, rgba(173, 216, 230, 0.6) 25px, transparent 25px), /* Globo Azul 1 */
+                radial-gradient(circle at 90% 20%, rgba(255, 192, 203, 0.6) 22px, transparent 22px), /* Globo Rosa 1 */
+                radial-gradient(circle at 40% 10%, rgba(173, 216, 230, 0.5) 20px, transparent 20px), /* Globo Azul 2 */
+                radial-gradient(circle at 60% 90%, rgba(255, 192, 203, 0.5) 23px, transparent 23px), /* Globo Rosa 2 */
                 
                 /* Estrellas Amarillas y Fucsias Espaciadas (Círculos CSS) */
-                radial-gradient(circle at 25% 45%, rgba(255, 255, 100, 0.7) 10px, transparent 10px), /* Estrella Amarilla 1 */
-                radial-gradient(circle at 75% 65%, rgba(255, 105, 180, 0.7) 8px, transparent 8px); /* Estrella Fucsia 1 */
+                radial-gradient(circle at 25% 45%, rgba(255, 255, 100, 0.7) 12px, transparent 12px), /* Estrella Amarilla 1 */
+                radial-gradient(circle at 75% 65%, rgba(255, 105, 180, 0.7) 10px, transparent 10px); /* Estrella Fucsia 1 */
 
             background-size: 
-                100px 100px, /* Tamaño del osito 1 */
-                80px 80px,   /* Tamaño del osito 2 */
-                120px 120px, /* Tamaño del osito 3 */
-                90px 90px,   /* Tamaño del osito 4 */
+                /* Tamaños de los ositos - ¡Ahora más grandes y más espaciados! */
+                250px 250px,   /* Osito 1 */
+                300px 300px,   /* Osito 2 */
+                200px 200px,   /* Osito 3 */
+                280px 280px,   /* Osito 4 */
                 
-                150px 150px, /* Tamaño del patrón de globos 1 */
-                180px 180px, /* Tamaño del patrón de globos 2 */
-                120px 120px, /* Tamaño del patrón de globos 3 */
-                160px 160px, /* Tamaño del patrón de globos 4 */
+                /* Tamaños de los globos - También más grandes */
+                250px 250px, 280px 280px, 
+                220px 220px, 270px 270px, 
                 
-                100px 100px, /* Tamaño del patrón de estrellas 1 */
-                110px 110px; /* Tamaño del patrón de estrellas 2 */
+                /* Tamaños de las estrellas */
+                180px 180px, 200px 200px;
                 
             background-repeat: repeat; /* ¡Todos los elementos se repiten! */
-            background-attachment: fixed; /* El fondo no se mueve al hacer scroll */
+            background-attachment: fixed; 
+            
+            /* Posiciones de los elementos - Ajustadas para que se vean más dispersos */
+            /* Cada par (X Y) corresponde a cada background-image de arriba */
             background-position: 
-                20px 20px,   /* Posición del osito 1 */
-                150px 100px, /* Posición del osito 2 */
-                280px 200px, /* Posición del osito 3 */
-                50px 250px,  /* Posición del osito 4 */
+                50px 50px,    /* Osito 1 */
+                300px 200px,  /* Osito 2 */
+                550px 100px,  /* Osito 3 */
+                100px 400px,  /* Osito 4 */
 
-                0px 0px, /* Posición de globos */
-                0px 0px, /* Posición de globos */
-                0px 0px, /* Posición de globos */
-                0px 0px, /* Posición de globos */
+                150px 0px,    /* Globo Azul 1 */
+                0px 250px,    /* Globo Rosa 1 */
+                400px 350px,  /* Globo Azul 2 */
+                200px 500px,  /* Globo Rosa 2 */
 
-                0px 0px, /* Posición de estrellas */
-                0px 0px; /* Posición de estrellas */
+                350px 150px,  /* Estrella Amarilla 1 */
+                500px 450px;  /* Estrella Fucsia 1 */
             
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: #4a4a4a; /* Color de texto principal */
+            color: #4a4a4a; 
             padding: 20px;
             box-sizing: border-box;
         }
-
         /* FONDO DE LA TARJETA (Rosa Polvo) */
         .contenedor-tarjeta {
             background-color: #f8e1e7; /* Fondo Rosa Polvo (más visible que el blanco) */
