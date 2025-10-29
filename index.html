@@ -21,6 +21,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
+        /* ******* NUEVA MARCA FIJA EN ESQUINA INFERIOR DERECHA ******* */
+        .footer-marca {
+            position: fixed; /* Fija la posición en la pantalla */
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.9em;
+            color: #007bff; /* Color Azul Brillante (ajusta si quieres otro) */ 
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Sombra suave */
+            z-index: 99; 
+        }
+
+        /* AJUSTE PARA MÓVILES */
+        @media (max-width: 600px) {
+            /* ... (asegúrate de que esta sección ya existe) ... */
+            .footer-marca { bottom: 10px; right: 10px; font-size: 0.8em; }
+        }
+        /* **************************************************** */
         * {
     box-sizing: border-box;
 }
@@ -144,9 +163,8 @@
 </head>
 <body>
     <div class="contenedor-tarjeta">
-        
-        <div class="header-marca">PequeCreaciones_KaelHN</div> 
-
+        <div class="footer-marca">PequeCreaciones_KaelHN</div>
+</body>
         <h1>¡Nos encantaría contar contigo!</h1>
         <p>Tu presencia es muy importante para nosotros. Por favor, elige una opción a continuación para confirmar tu asistencia.</p>
         
